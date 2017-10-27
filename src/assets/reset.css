@@ -1,0 +1,39 @@
+body {
+  background-color: #F4F5F8;
+  font-family: "Microsoft YaHei", "宋体", "Lucida Grande", "Lucida Sans", sans-serif;
+}
+
+body,
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+.main-titie {
+	height: 89px;
+	line-height: 89px;
+	font-size: 20px;
+	color: #CFD4DC; 
+}
+input, button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+input.el-input__inner {
+	// height: 40px;
+	// margin-top: 17px;
+	// line-height: 36px;
+}
