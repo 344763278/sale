@@ -14,12 +14,16 @@
     </div>
     <div class="table-wrap">
       <el-table :data="dataList" stripe style="width: 100% ; min-height:300px">
-        <el-table-column prop="system_id" label="序号"></el-table-column>
-        <el-table-column prop="name" label="品牌"></el-table-column>
-        <el-table-column prop="system_desc" label="SKU"></el-table-column>
-        <el-table-column prop="system_desc" label="基准价状态"></el-table-column>
-        <el-table-column prop="system_desc" label="源准价/元"></el-table-column>
-        <el-table-column prop="system_desc" label="新基准价"></el-table-column>
+        <el-table-column prop="a" label="序号"></el-table-column>
+        <el-table-column prop="b" label="品牌"></el-table-column>
+        <el-table-column prop="c" label="SKU"></el-table-column>
+        <el-table-column prop="d" label="基准价状态"></el-table-column>
+        <el-table-column prop="e" label="源准价/元"></el-table-column>
+        <el-table-column prop="f" label="新基准价">
+          <template slot-scope="scope">
+            <el-input v-model="scope.row.f" class="inline-input"></el-input>
+          </template>
+        </el-table-column>
       </el-table>
     </div>
     <div class="pagination">
@@ -34,7 +38,8 @@ import util from '../../common/util'
 export default {
   data() {
     return {
-      dataList: [],
+      input:'',
+      dataList: [{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},],
       currentPage: 0,
       total: 100,
       pageSize: 10,

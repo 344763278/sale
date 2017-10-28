@@ -273,7 +273,7 @@
       flex: 0 0 200px;
       width: 200px;
       .el-menu {
-        width:100%!important
+        width:100%!important;
       }
     }
     .menu-toggle {

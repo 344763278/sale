@@ -70,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div class="table-wrap">
+    <div class="index-table-wrap">
       <el-table :data="dataList" stripe style="min-height:280px">
         <el-table-column prop="num" label="时间"></el-table-column>
         <el-table-column prop="name" label="账户类型"></el-table-column>
@@ -156,6 +156,9 @@ export default {
 
 </script>
 <style scoped lang="scss">
+.index-table-wrap .el-table tr {
+  height: 30px;
+}
 .user-index-root {  
   .base-info { 
     display: flex;
@@ -276,7 +279,7 @@ export default {
         }
       }
     }
-    .table-wrap {
+    .index-table-wrap {
       background: #fff;
     }
   }

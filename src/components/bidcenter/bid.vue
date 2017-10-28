@@ -13,15 +13,35 @@
           :data="dataList"
           stripe
           style="width: 100% ; min-height:300px">
-          <el-table-column prop="system_id" label="序号" ></el-table-column>
-          <el-table-column prop="name" label="批次号" ></el-table-column>
-          <el-table-column prop="system_desc" label="SKU" ></el-table-column>  
-          <el-table-column prop="system_desc" label="成色等级" ></el-table-column>  
-          <el-table-column prop="system_desc" label="供货量/台" ></el-table-column>  
-          <el-table-column prop="system_desc" label="数量/台" ></el-table-column>  
-          <el-table-column prop="system_desc" label="基准价" ></el-table-column>  
-          <el-table-column prop="system_desc" label="成色比例" ></el-table-column>  
-          <el-table-column prop="system_desc" label="单位/元" ></el-table-column>  
+          <el-table-column prop="a" label="序号" ></el-table-column>
+          <el-table-column prop="b" label="批次号" ></el-table-column>
+          <el-table-column prop="c" label="SKU" ></el-table-column>  
+          <el-table-column prop="d" label="成色等级" ></el-table-column>  
+          <el-table-column prop="system_desc" label="供货量/台" >
+            <template slot-scope="scope">
+              <el-input v-model="input" class="inline-input"></el-input>
+            </template>
+          </el-table-column>  
+          <el-table-column prop="system_desc" label="数量/台" >
+            <template slot-scope="scope">
+              <el-input v-model="input" class="inline-input"></el-input>
+            </template>
+          </el-table-column>  
+          <el-table-column prop="system_desc" label="基准价" >
+            <template slot-scope="scope">
+              <el-input v-model="input" class="inline-input"></el-input>
+            </template>
+          </el-table-column>  
+          <el-table-column prop="system_desc" label="成色比例" >
+            <template slot-scope="scope">
+              <el-input v-model="input" class="inline-input"></el-input>
+            </template>
+          </el-table-column>  
+          <el-table-column prop="system_desc" label="单位/元" >
+            <template slot-scope="scope">
+              <el-input v-model="input" class="inline-input"></el-input>
+            </template>
+          </el-table-column>  
       </el-table>
     </div>
     <div class="pagination">
@@ -49,12 +69,13 @@ import util from '../../common/util'
 export default {
   data() {
     return {
-      dataList: [],
+      dataList: [{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},],
       currentPage: 0,
       total: 100,
       pageSize: 10,
       aa: '',
-      orderList: []
+      orderList: [],
+      input:''
     }
   },
   methods: {
@@ -76,7 +97,7 @@ export default {
       color: #fff;
       border-radius: 3px;
       vertical-align: middle; 
-    }
+    } 
     .filter {
       height: 70px;
       margin-top: 20px;

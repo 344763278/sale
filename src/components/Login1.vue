@@ -6,16 +6,18 @@
       Copyright © 2012-2017，Huishoubao Tech，All Rights Reserved
     </p>
     <div class="login-box">
-      <h3 class="tit">竞拍平台登录</h3>
+      <h3 class="tit">
+        <img src="../assets/images/login-tit.png" height="52" width="329" alt="tit">
+      </h3>
       <p class="p1">
         <input class="uername" type="text" autocomplete="off" placeholder="请输入账号" >
       </p>
       <p class="p2"> 
-        <input class="password" type="text" autocomplete="off" placeholder="请输入密码" >
+        <input class="password" type="password" autocomplete="off" placeholder="请输入密码" >
         <span class="psw-icon"></span>
       </p> 
       <p class="psw-info">
-        <input class="checkBox" type="checkbox"><span class="rem-pws">记住密码</span>|<span class="forget-pws">忘记密码</span>
+        <input class="checkBox" type="checkbox" id="re"><label for="re" class="rem-pws">记住密码</label>|<span class="forget-pws">忘记密码</span>
       </p>
       <p class="btn-box">
         <button class="login-btn">登录</button>
@@ -60,7 +62,7 @@
   }
   .copy-right {
     position: absolute;
-    bottom: 42px;
+    bottom: 20px;
     left: 0;
     width:100%;
     text-align: center;
@@ -68,6 +70,7 @@
     height: 20px;
     line-height: 20px;
     color: #B7BBC2;
+    user-select: none;
 
 
   }
@@ -78,13 +81,18 @@
     left: 50%;
     top: 50%;
     margin-left: -223px;
-    margin-top: -248px;
-    .tit {
-      line-height: 134px;
-      font-size: 51px;
-      color: #38A5FF;
-      text-align: center; 
-      letter-spacing: 5px;
+    // margin-top: -248px;
+    margin-top: -318px;
+    .tit { 
+      width: 446px;
+      height: 134px;
+      padding-top: 41px;
+      box-sizing: border-box;
+      user-select: none;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
     .p2{
       position: relative;  
@@ -105,7 +113,7 @@
       width: 446px;
       height: 64px;
       border: 1px solid #D0D4DC;
-      color: #D0D4DC;
+      color: #504F69;
       border-radius: 32px;
       box-sizing: border-box;
       padding: 0 26px;
@@ -127,11 +135,13 @@
         color: #8193A0;
         margin-right: 15px;
         cursor: pointer; 
+        user-select: none;
       }
       .forget-pws {
         color: #8193A0;
         margin-left: 15px;
         cursor: pointer; 
+        user-select: none;
       }
     }
     .btn-box {

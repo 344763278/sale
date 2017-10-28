@@ -28,11 +28,21 @@
     </div>
     <div class="table-wrap">
       <el-table :data="dataList" stripe style="min-height:300px">
-        <el-table-column prop="system_id" label="时间"></el-table-column>
-        <el-table-column prop="name" label="账户类型"></el-table-column>
-        <el-table-column prop="system_desc" label="账户名"></el-table-column>
-        <el-table-column prop="system_desc" label="收支类型"></el-table-column>
-        <el-table-column prop="system_desc" label="金额"></el-table-column>
+        <el-table-column prop="a" label="序号"></el-table-column>
+        <el-table-column prop="b" label="报价日期"></el-table-column>
+        <el-table-column prop="c" label="报价单号"></el-table-column>
+        <el-table-column prop="d" label="报价批次"></el-table-column>
+        <el-table-column prop="e" label="供货量"></el-table-column>
+        <el-table-column prop="f" label="竞拍量"></el-table-column>
+        <el-table-column prop="g" label="报价总额"></el-table-column>
+        <el-table-column prop="h" label="竞拍类型"></el-table-column>
+        <el-table-column prop="i" label="竞拍结果"></el-table-column>
+        <el-table-column prop="j" label="竞拍详情">
+          <template slot-scope="scope"> 
+            <!-- <el-button type="text" @click="to"> 查看详情 </el-button> -->
+            <button class="btn1" @click="to">查看详情</button>
+          </template>
+        </el-table-column>
       </el-table>
     </div>
     <div class="pagination">
@@ -47,7 +57,7 @@ import util from '../../common/util'
 export default {
   data() {
     return {
-      dataList: [],
+      dataList: [{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10}],
       currentPage: 0,
       total: 100,
       pageSize: 10,
@@ -62,6 +72,9 @@ export default {
   methods: {
     handleCurrentChange() {
 
+    },
+    to() {
+      this.$router.push('/bidcenter/hddetail')
     }
   }
 }
@@ -97,10 +110,22 @@ input.el-input__inner {
       vertical-align: middle;
     }
     .type {
-      width: 160px;
+      width: 150px;
     }
     .data-select {
-      width: 160px;
+      width: 150px;
+    }
+  }
+  .table-wrap {
+    .btn1 {
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      font-size: 13px;
+      background: #2A9FFF;
+      color: #fff;
+      border-radius: 3px;
+      vertical-align: middle;
     }
   }
 }

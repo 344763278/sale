@@ -32,7 +32,11 @@
               <el-table-column prop="e" label="版本"></el-table-column>
               <el-table-column prop="f" label="保修"></el-table-column>
               <el-table-column prop="g" label="制式"></el-table-column>
-              <el-table-column prop="h" label="基准价/元"></el-table-column>
+              <el-table-column prop="h" label="基准价/元">
+                <template slot-scope="scope">
+                  <el-input v-model="scope.row.h" class="inline-input"></el-input>
+                </template>
+              </el-table-column>
             </el-table>
           </div>
           <div class="pagination">
@@ -45,10 +49,14 @@
         <div class="tab-box-2" v-show="!tabFlag">
           <div class="table-wrap">
             <el-table :data="dataList" stripe style="width: 100% ; min-height:300px">
-              <el-table-column prop="system_id" label="序号"></el-table-column>
-              <el-table-column prop="name" label="等级"></el-table-column>
-              <el-table-column prop="system_desc" label="等级描述"></el-table-column>
-              <el-table-column prop="system_desc" label="比例"></el-table-column>
+              <el-table-column prop="a" label="序号"></el-table-column>
+              <el-table-column prop="b" label="等级"></el-table-column>
+              <el-table-column prop="c" label="等级描述" min-width="250"></el-table-column>
+              <el-table-column prop="system_desc" label="比例">
+                <template slot-scope="scope">
+                  <el-input v-model="scope.row.d+'%'" class="inline-input"></el-input>
+                </template>
+              </el-table-column>
             </el-table>
           </div>
           <div class="pagination">
@@ -67,33 +75,8 @@ export default {
   data() {
     return {
       tabFlag: true,
-      dataList: [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-      ],
-      dataList1: [
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7},
-        {a:1,b:2,c:3,d:4,e:5,f:5,g:6,h:7} 
-      ],
+      dataList: [{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4},{a:1,b:2,c:3,d:4}],
+      dataList1: [{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},{a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10},],
       currentPage: 0,
       total: 100,
       pageSize: 10,
