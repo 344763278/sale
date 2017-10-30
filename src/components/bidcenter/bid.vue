@@ -122,19 +122,21 @@ export default {
       .num {
         font-size: 20px;
         color: #504F69;
-        margin-right: 12px;
+        margin-right: 12px; 
         vertical-align: middle;
       }
       .num-info {
         font-size: 14px;
         color: #788C9A;
-        margin-right: 68px;
+        // margin-right: 68px;
+        margin-right: 16px;
         vertical-align: middle;
       }
       .has{
         font-size: 20px;
         color: #504F69;
-        margin-right: 30px;
+        // margin-right: 30px;
+        margin-right: 16px;
         vertical-align: middle;
         span {
           color: #FF4444;
@@ -144,6 +146,7 @@ export default {
         font-size: 20px;
         color: #504F69;
         margin-right: 70px;
+        margin-right: 16px;
         vertical-align: middle;
         span {
           color: #FF4444;
@@ -153,7 +156,8 @@ export default {
         color: #504F69;
         font-size: 20px;
         vertical-align: middle;
-        margin-right: 30px;
+        // margin-right: 30px;
+        margin-right: 16px;
         span {
           color: #2A9FFF;
         }

@@ -140,6 +140,20 @@ export default {
           name: '王小虎',
           address: '上海市',
           price: '2323'
+        },
+        {
+          num: '1',
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市',
+          price: '2323'
+        },
+        {
+          num: '1',
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市',
+          price: '2323'
         } 
       ]
     }
@@ -157,7 +171,8 @@ export default {
 </script>
 <style scoped lang="scss">
 .index-table-wrap .el-table tr {
-  height: 30px;
+  // height: 30px;
+  height: 60px;
 }
 .user-index-root {  
   .base-info { 
