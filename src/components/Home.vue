@@ -33,10 +33,10 @@
             </el-menu>
           </div>
         </div>
-        <div class="exit" @click="back">
-          <span class="icon"></span>
-          <span class="text">退出</span>
-        </div>
+      </div>
+      <div class="exit" @click="back">
+        <span class="icon"></span>
+        <span class="text">退出</span>
       </div>
     </div>
     <div class="main">
@@ -47,160 +47,154 @@
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      hasNewPriceUpdata: true,
-      unique: 'false'
-    }
-  },
-  methods: {
-    handleOpen() {
-
+  export default {
+    data() {
+      return {
+        hasNewPriceUpdata: true,
+        unique: 'false'
+      }
     },
-    handleClose() {
+    methods: {
+      handleOpen() {
 
-    },
-    back() {
-      this.$router.push('/login')
+      },
+      handleClose() {
+
+      },
+      back() {
+        this.$router.push('/login')
+      }
     }
   }
-}
 
 </script>
 <style scoped lang="scss">
-.el-submenu .el-menu-item {
-  background: #fff!important;
-  min-width: 150px;
-}
+  .el-submenu .el-menu-item {
+    background: #fff !important;
+    min-width: 150px;
+  }
 
-.menu-icon1,
-.menu-icon2,
-.menu-icon3 {
-  width: 22px;
-  height: 22px;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 15px;
-  margin-right: 12px;
-  background: url(../assets/images/menu-icon1.png) no-repeat;
-}
+  .menu-icon1,
+  .menu-icon2,
+  .menu-icon3 {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-right: 12px;
+    background: url(../assets/images/menu-icon1.png) no-repeat;
+  }
 
-.menu-icon2 {
-  background: url(../assets/images/menu-icon2.png) no-repeat;
-}
+  .menu-icon2 {
+    background: url(../assets/images/menu-icon2.png) no-repeat;
+  }
 
-.menu-icon3 {
-  background: url(../assets/images/menu-icon3.png) no-repeat;
-}
+  .menu-icon3 {
+    background: url(../assets/images/menu-icon3.png) no-repeat;
+  }
 
-.new-price {
-  display: inline-block;
-  width: 26px;
-  height: 16px;
-  font-size: 12px;
-  color: #fff;
-  background: #FABE00;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 16px;
-  margin-left: 4px;
-}
+  .new-price {
+    display: inline-block;
+    width: 26px;
+    height: 16px;
+    font-size: 12px;
+    color: #fff;
+    background: #FABE00;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 16px;
+    margin-left: 4px;
+  }
 
-// 取消掉导航的小箭头
-// .el-submenu__title .el-submenu__icon-arrow { 
-//   font-size: 0px;
-// }
-.root {
-  // display: flex;
-  // display: box;
-  // display: -moz-box;
-  // display: -webkit-box;
-  // display: -ms-flexbox;
-  min-width: 1300px; // height: 950px;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  .aside {
-    // flex: 0 0 220px;
-    // position: relative;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
+  .root {
+    // display: flex;
+    // display: box;
+    // display: -moz-box;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    min-width: 1300px;
     height: 100%;
     overflow: hidden;
-    box-sizing: border-box;
-    width: 220px;
-    background: #fff; // padding-top: 34px;
-    // height: 950px;
-    .aside-cont {
+    position: relative;
+    .aside {
+      // flex: 0 0 220px;
+      // position: relative;
       position: absolute;
       left: 0;
-      top: 0; 
-      bottom: 0; 
-      width: 100%;  
-      min-height: 100%;
-      // padding-bottom: 120px;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      overflow: hidden;
       box-sizing: border-box;
-      overflow-y: auto;
-      .logo-box {
-        text-align: center;
-        border-bottom: 1px solid #F2F2F2;
-        height: 216px;
-        padding-top: 42px;
-        box-sizing: border-box;
-        img {
-          width: 101px;
-          height: 133px;
-          display: block;
-          margin: 0 auto;
-        }
-      }
-      .avatar-box {
-        border-bottom: 1px solid #F2F2F2;
-        padding: 15px 0 11px 0;
-        text-align: center;
-        .avator {
-          height: 64px;
-          width: 64px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-        }
-        .name {
-          height: 16px;
-          line-height: 16px;
-          font-sizing: 16px;
-          color: #504F69;
-        }
-        .create-time {
-          line-height: 26px;
-          font-size: 14px;
-          color: #C9CED7;
-        }
-      }
-      .link-box {
-        box-sizing: border-box;
-        padding-top: 40px; 
-        padding-bottom: 120px;
-        // min-height: 905px;
-        .menu {
-          width: 150px;
-          background: #fff;
-          margin: 0 auto;
-          .menu-item-wrap {
-            padding: 0;
+      width: 220px;
+      background: #fff;
+      .aside-cont {
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*top: 0;*/
+        /*bottom: 0;*/
+        width: 100%;
+        height: calc(100% - 80px);
+        /*padding-bottom: 80px;*/
+        /*box-sizing: border-box;*/
+        overflow: auto;
+        .logo-box {
+          text-align: center;
+          border-bottom: 1px solid #F2F2F2;
+          height: 216px;
+          padding-top: 42px;
+          box-sizing: border-box;
+          img {
+            width: 101px;
+            height: 133px;
+            display: block;
+            margin: 0 auto;
           }
-          .menu-item {
-            background: transparent;
-            &:hover {
-              background: none; // width: 100%!important;
+        }
+        .avatar-box {
+          border-bottom: 1px solid #F2F2F2;
+          padding: 15px 0 11px 0;
+          text-align: center;
+          .avator {
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+          }
+          .name {
+            height: 16px;
+            line-height: 16px;
+            font-sizing: 16px;
+            color: #504F69;
+          }
+          .create-time {
+            line-height: 26px;
+            font-size: 14px;
+            color: #C9CED7;
+          }
+        }
+        .link-box {
+          box-sizing: border-box;
+          padding-top: 40px;
+          .menu {
+            width: 150px;
+            background: #fff;
+            margin: 0 auto;
+            .menu-item-wrap {
+              padding: 0;
             }
-          }
-          &:hover {
             .menu-item {
-              // background: transparent;
-              width: 100%;
+              background: transparent;
+              &:hover {
+                background: none; // width: 100%!important;
+              }
+            }
+            &:hover {
+              .menu-item {
+                // background: transparent;
+                width: 100%;
+              }
             }
           }
         }
@@ -210,14 +204,13 @@ export default {
         left: 50%;
         bottom: 0;
         margin: 0 auto;
-        width: 80%;
+        width: 100%;
         height: 80px;
         line-height: 80px;
         text-align: center;
         transform: translateX(-50%);
         border-top: 1px solid #F2F2F2;
-        margin: 0 auto;
-        cursor: pointer; 
+        cursor: pointer;
         .icon {
           width: 16px;
           height: 16px;
@@ -232,36 +225,24 @@ export default {
           vertical-align: middle;
         }
       }
-    } 
+    }
+    .main {
+      position: absolute;
+      left: 220px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      min-height: 100%;
+      overflow-y: auto;
+      background: #F4F5F8;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+
+      // flex: 1;
+      // -webkit-box-flex: 1;
+      // -moz-box-flex: 1;
+    }
   }
-  /* .move-enter-active, .move-leave-active {
-    transition: all .5s;
-  }
-  .move-enter {
-    // transform: translate3d(-100%, 0, 0);
-    opacity: 0;
-  }
-  .move-leave-to {
-    // transform: translate3d(100%, 0, 0);
-    opacity: 0;
-  } */
-  .main {
-    // flex: 1; 
-    // -webkit-box-flex: 1;       
-    // -moz-box-flex: 1;
-    position: absolute;
-    left: 220px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    min-height: 100%;
-    overflow-y: auto;
-    background: #F4F5F8;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-    height: 950px;
-  }
-}
 
 </style>
