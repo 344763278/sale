@@ -113,9 +113,10 @@
     // display: -moz-box;
     // display: -webkit-box;
     // display: -ms-flexbox;
+
     min-width: 1300px;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden; 
     position: relative;
     .aside {
       // flex: 0 0 220px;
@@ -232,8 +233,9 @@
       top: 0;
       right: 0;
       bottom: 0;
-      min-height: 100%;
+      min-height: 100%; 
       overflow-y: auto;
+      overflow-x: auto;
       background: #F4F5F8;
       padding-left: 20px;
       padding-right: 20px;
