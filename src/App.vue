@@ -43,7 +43,8 @@ a{
 #app {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: auto;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
